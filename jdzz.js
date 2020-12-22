@@ -111,7 +111,7 @@ function submitInviteId(userName) {
       (err, resp, _data) => {
         try {
           const { code, data = {} } = JSON.parse(_data);
-          $.log(`\n邀请码提交地址1：${code}\n${$.showLog ? _data : ''}`);
+          $.log(`\n邀请码提交地址一：${code}\n${$.showLog ? _data : ''}`);
           if (data.value) {
             $.result.push('【邀请码地址1】提交成功！');
           }
@@ -132,7 +132,7 @@ function submitInviteId2(userName) {
         try {
           $.log(resp);
           const { code, data = {} } = JSON.parse(_data);
-          $.log(`\n邀请码提交地址2：${code}\n${$.showLog ? _data : ''}`);
+          $.log(`\n邀请码提交地址二：${code}\n${$.showLog ? _data : ''}`);
         } catch (e) {
           $.logErr(e, resp);
         } finally {
