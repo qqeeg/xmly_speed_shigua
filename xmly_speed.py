@@ -80,6 +80,7 @@ def str2dict(str_cookie):
         dict_cookie["1&_device"] = re.sub(
             regex, appid, dict_cookie["1&_device"], 0, re.MULTILINE)
         print(dict_cookie["1&_device"])
+        print(str_cookie)
 
     except (IndexError, KeyError):
         print("cookie填写出错 ❌,仔细查看说明")
