@@ -127,7 +127,7 @@ function submitInviteId(userName) {
 function submitInviteId2(userName) {
   return new Promise(resolve => {
     $.log(`\n你的互助码: ${$.shareTask.itemId}`);
-     $.log(`https://code.chiang.fun/api/v1/jd/jdzz/create/${$.shareTask.itemId}/`);
+    $.log(`https://code.chiang.fun/api/v1/jd/jdzz/create/${$.shareTask.itemId}/`);
     $.get({ url: `https://code.chiang.fun/api/v1/jd/jdzz/create/${$.shareTask.itemId}/` }, async (err, resp, _data) => {
       (err, resp, _data) => {
         try {
