@@ -8,7 +8,7 @@
 
   quanx:
   [task_local]
-  0 9 * * * https://raw.githubusercontent.com/whyour/hundun/master/quanx/jdzz.js, tag=京东赚赚, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdzz.png, enabled=true
+  1 0,6,9,12 * * * https://raw.githubusercontent.com/qqeeg/xmly_speed_shigua/main/jdzz.js, tag=京东赚赚, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jdzz.png, enabled=true
 
   loon:
   [Script]
