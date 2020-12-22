@@ -111,9 +111,9 @@ function submitInviteId(userName) {
       (err, resp, _data) => {
         try {
           const { code, data = {} } = JSON.parse(_data);
-          $.log(`\n邀请码提交：${code}\n${$.showLog ? _data : ''}`);
+          $.log(`\n邀请码提交地址1：${code}\n${$.showLog ? _data : ''}`);
           if (data.value) {
-            $.result.push('【邀请码】提交成功！');
+            $.result.push('【邀请码地址1】提交成功！');
           }
         } catch (e) {
           $.logErr(e, resp);
@@ -129,11 +129,10 @@ function submitInviteId2(userName) {
     $.log(`\n你的互助码: ${$.shareTask.itemId}`);
     $.log(`https://code.chiang.fun/api/v1/jd/jdzz/create/${$.shareTask.itemId}/`);
     $.get({ url: `https://code.chiang.fun/api/v1/jd/jdzz/create/${$.shareTask.itemId}/` }, async (err, resp, _data) => {
-      (err, resp, _data) => {
         try {
           $.log(resp);
           const { code, data = {} } = JSON.parse(_data);
-          $.log(`\n邀请码提交：${code}\n${$.showLog ? _data : ''}`);
+          $.log(`\n邀请码提交地址2：${code}\n${$.showLog ? _data : ''}`);
         } catch (e) {
           $.logErr(e, resp);
         } finally {
