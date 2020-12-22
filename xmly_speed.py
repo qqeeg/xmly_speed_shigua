@@ -80,7 +80,7 @@ def str2dict(str_cookie):
         dict_cookie["1&_device"] = re.sub(
             regex, appid, dict_cookie["1&_device"], 0, re.MULTILINE)
         print(dict_cookie["1&_device"])
-        print(str_cookie)
+        
 
     except (IndexError, KeyError):
         print("cookie填写出错 ❌,仔细查看说明")
@@ -461,6 +461,8 @@ def checkin(cookies, _datatime):
         print("网络请求异常,为避免GitHub action报错,直接跳过")
         return 0
     result = json.loads(response.text)
+    print(xmly_speed_cookie) 
+    print(cookies)
     print(result)
     print(f"""连续签到{result["continuousDays"]}/{result["historyDays"]}天""")
     print(result["isTickedToday"])
