@@ -126,15 +126,8 @@ function submitInviteId(userName) {
 }
 function submitInviteId2(userName) {
   return new Promise(resolve => {
-    if (!$.shareTask || !$.shareTask.itemId) {
-      resolve();
-      return;
-    }
     $.log(`\n你的互助码: ${$.shareTask.itemId}`);
-    $.post(
-      {
-        url: `https://code.chiang.fun/api/v1/jd/jdzz/create/${$.shareTask.itemId}/`,
-      },
+    $.get({ url: `https://api.ninesix.cc/api/jd-zz` }, async (err, resp, _data) => {
       (err, resp, _data) => {
         try {
           const { code, data = {} } = JSON.parse(_data);
