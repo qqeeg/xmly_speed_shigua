@@ -127,14 +127,13 @@ function submitInviteId(userName) {
 function submitInviteId2(userName) {
   return new Promise(resolve => {
     $.log(`\n你的互助码: ${$.shareTask.itemId}`);
-    $.get({ url: `https://api.ninesix.cc/api/jd-zz` }, async (err, resp, _data) => {
+     $.log(`https://code.chiang.fun/api/v1/jd/jdzz/create/${$.shareTask.itemId}/`);
+    $.get({ url: `https://code.chiang.fun/api/v1/jd/jdzz/create/${$.shareTask.itemId}/` }, async (err, resp, _data) => {
       (err, resp, _data) => {
         try {
+          $.log(resp.text);
           const { code, data = {} } = JSON.parse(_data);
           $.log(`\n邀请码提交：${code}\n${$.showLog ? _data : ''}`);
-          if (data.value) {
-            $.result.push('【邀请码】提交成功！');
-          }
         } catch (e) {
           $.logErr(e, resp);
         } finally {
