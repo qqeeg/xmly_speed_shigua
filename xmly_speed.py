@@ -461,8 +461,6 @@ def checkin(cookies, _datatime):
         print("网络请求异常,为避免GitHub action报错,直接跳过")
         return 0
     result = json.loads(response.text)
-    print(xmly_speed_cookie) 
-    print(cookies)
     print(result)
     print(f"""连续签到{result["continuousDays"]}/{result["historyDays"]}天""")
     print(result["isTickedToday"])
