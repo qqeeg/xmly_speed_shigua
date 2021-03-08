@@ -85,7 +85,7 @@ def str2dict(str_cookie):
     except (IndexError, KeyError):
         print("cookie填写出错 ❌,仔细查看说明")
         raise
-        print(dict_cookie)
+    print(dict_cookie)
     return dict_cookie
 
 
